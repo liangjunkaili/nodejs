@@ -1,9 +1,15 @@
 const model = require('../model');
 
 var fn_index = async (ctx, next) => {
-  ctx.render('index.html', {
-    title: 'Welcome'
-  });
+  let user = ctx.state.user;
+  if(user){
+    ctx.render('room.html', {
+      user: user
+    });
+  }else{
+    ctx.response.redirect('/signin');
+  }
+
 }
 
 var fn_signin = async (ctx, next) => {
@@ -34,6 +40,6 @@ var fn_signin = async (ctx, next) => {
 };
 
 module.exports = {
-  'GET /': fn_index,
-  'POST /signin': fn_signin
+  'GET /': fn_index
+  // 'POST /signin': fn_signin
 };

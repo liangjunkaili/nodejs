@@ -1,31 +1,61 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-  <title>Bootstrap 101 Template</title>
-
-  <!-- Bootstrap -->
-  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
-  <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
-  <!--[if lt IE 9]>
-      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="learn javascript by www.liaoxuefeng.com">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="../static/css/bootstrap.css">
+  <script src="../static/js/jquery.min.js"></script>
+  <script src="../static/js/vue.min.js"></script>
+  <script src="../static/js/bootstrap.js"></script>
 </head>
 
 <body>
-  <h1>你好，世界！</h1>
-
-  <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
-  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-  <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
-  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <header class="navbar navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="/" class="navbar-brand">Learn JavaScript</a>
+      </div>
+      <nav class="collapse navbar-collapse" id="bs-navbar">
+        <ul class="nav navbar-nav">
+          <li>
+            <a target="_blank" href="http://www.liaoxuefeng.com/">Get Courses</a>
+          </li>
+          <li>
+            <a target="_blank" href="https://github.com/michaelliao/learn-javascript">Source Code</a>
+          </li>
+          <li>
+            <a target="_blank" href="http://getbootstrap.com/">Resource</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/signout">Sign Out</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div id="important" style="color:#cdbfe3; background-color:#6f5499; padding:30px 0; margin:-20px 0 20px 0;">
+    <div class="container">
+      <h1 style="color:#fff; font-size:60px">Getting started with WebSocket!</h1>
+      <p style="font-size:24px; line-height:48px">Learn JavaScript, Node.js, WebSocket, npm, koa2, nunjucks, babel, etc. at liaoxuefeng.com.</p>
+    </div>
+  </div>
+  {% block main %} {% endblock %}
+  <footer style="background-color:#ddd; padding: 20px 0;">
+    <div class="container">
+      <p>
+        <a target="_blank" href="http://www.liaoxuefeng.com">Website</a> -
+        <a target="_blank" href="https://github.com/michaelliao/learn-javascript">GitHub</a> -
+        <a target="_blank" href="http://weibo.com/liaoxuefeng">Weibo</a>
+      </p>
+      <p>This JavaScript course is created by
+        <a target="_blank" href="http://weibo.com/liaoxuefeng">@廖雪峰</a>.</p>
+      <p>Code licensed
+        <a target="_blank" href="https://github.com/michaelliao/learn-javascript/blob/master/LICENSE">Apache</a>.</p>
+    </div>
+  </footer>
 </body>
-
-</html>
